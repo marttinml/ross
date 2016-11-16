@@ -1,0 +1,29 @@
+<main>
+	<header>
+		<i class="fa fa-bars fa-2x fa-white" aria-hidden="true"></i>
+		<ng-menu options="" selected="" ></ng-menu>	
+	</header>
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Title</h1> <h2>SubTitle</h2> <span>content 1</span> </li>
+	</ul>
+	
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Input</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> 
+			<ng-input ng-model="name" place-holder="Name" ></ng-input>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-3">
+			<ng-input ng-model="lastname" place-holder="Lastname" optional="true"></ng-input>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-3">
+			<ng-input ng-model="name" place-holder="Lastname" disable="true"></ng-input>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-3">
+			<ng-input ng-model="lastname" place-holder="Lastname" optional="true" disable="true"></ng-input>
+		</li>
+	</ul>
+
+</main>

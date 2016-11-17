@@ -25,7 +25,7 @@
 	        require: '?ngModel',
 	        link: link,
 			scope:{
-				source:"@?source"
+				source:"=?source"
 			}
 		};
 

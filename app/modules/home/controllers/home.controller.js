@@ -53,14 +53,19 @@
         // };
 
         $scope.menu = {
-            user:{
+            user:{ 
                 name:"Martín",
                 picture:""
             },
             options:[
                 {
                     item:"item 1"
-
+                },
+                {
+                    item:"item 2"
+                },
+                {
+                    item:"item 3"
                 }
             ]
 

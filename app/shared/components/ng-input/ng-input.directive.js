@@ -4,7 +4,6 @@
 	var directive = function($swipe){
 		
 		var link = function(scope, element, attrs, ngModelCtrl){
-			scope.required;
 
 			ngModelCtrl.$render = function(){
 				scope.model = ngModelCtrl.$viewValue;
@@ -17,8 +16,11 @@
 				scope.inputBlur();
 			};
 			scope.inputFocus = function () {
-				console.log('inputFocus');
-                scope.empty = false;
+
+				if(!scope.disable && !scope.focus){
+	                scope.empty = false
+	                scope.focus = true;
+	            }
             };
 
             scope.inputBlur = function () {
@@ -27,6 +29,7 @@
                 } else {
                     scope.empty = false;
                 }
+                scope.focus = false;
             };
             scope.init();
 		};
@@ -39,13 +42,28 @@
 			scope:{
 				placeholder:"@?placeHolder",
 				optional:"=?optional",
-				disable:"=?disable"
+				disable:"=?disable",
+				focus:"=?focus"
 			}
 		};
 
 	};
 	
+	var focusMe = function() {
+	  return {
+	    link: function(scope, element, attrs) {
+	      scope.$watch(attrs.focusMe, function(value) {
+	        if(value === true) {
+	            element[0].focus();
+	            scope[attrs.focusMe] = false;
+	        }
+	      });
+	    }
+	  };
+	};
 
 
-	angular.module('ngInput', []).directive('ngInput',directive);
+	angular.module('ngInput', [])
+		.directive('ngInput',directive)
+		.directive("focusMe",focusMe);
 })();

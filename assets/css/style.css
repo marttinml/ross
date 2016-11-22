@@ -142,3 +142,15 @@ h2{
     padding: 15px;
     /* border: 1px solid red;*/
 }
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    background-color: rgb(51,153,75);
+    color:rgb(255,255,255);
+}
+button.disable{
+    background-color: rgb(200,200,200);
+    cursor: default;
+}

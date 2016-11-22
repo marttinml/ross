@@ -69,7 +69,13 @@
                 }
             ]
 
-        }
+        };
+        $scope.alertActive = false;
+        $scope.eventButton = function(){
+            $scope.alertActive = true;
+        };
+
+
 
     };
     controller.$inject = ['$scope','$rootScope','$routeParams','Home'];

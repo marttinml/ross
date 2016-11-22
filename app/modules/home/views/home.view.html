@@ -26,5 +26,23 @@
 			<ng-input ng-model="lastname" place-holder="Lastname" optional="true" disable="true"></ng-input>
 		</li>
 	</ul>
+	
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Button</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-6"> 
+			<button ng-click="true && eventButton()">tap here!</button>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-6">
+			<button ng-class="{disable:true}" ng-click="false && eventButton()">Button disable!</button>
+		</li>
+	</ul>
 
 </main>
+
+<ng-alert show="alertActive" title="Alert">
+	Hello!!
+</ng-alert>
+<ng-spin></ng-spin>	

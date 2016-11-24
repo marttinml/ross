@@ -33,10 +33,36 @@
 
 	<ul class="row">
 		<li class="md-col-6 sm-col-12 lg-col-6"> 
-			<button ng-click="true && eventButton()">tap here!</button>
+			<button ng-click="true && eventButton()">Tap here!</button>
 		</li>
 		<li class="md-col-6 sm-col-12 lg-col-6">
 			<button ng-class="{disable:true}" ng-click="false && eventButton()">Button disable!</button>
+		</li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Alert</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-6"> 
+			<button ng-click="true && showAlert()">Show alert!</button>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-6">
+			<button ng-class="{disable:true}" ng-click="false && showAlert()">Button disable!</button>
+		</li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Spin</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-6"> 
+			<button ng-click="true && showSpin()">Show spin!</button>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-6">
+			<button ng-class="{disable:true}" ng-click="false && showSpin()">Button disable!</button>
 		</li>
 	</ul>
 
@@ -45,4 +71,4 @@
 <ng-alert show="alertActive" title="Alert">
 	Hello!!
 </ng-alert>
-<ng-spin></ng-spin>	
+<ng-spin ng-show="spin"></ng-spin>	

@@ -13,8 +13,7 @@
 	        transclude: true,
 	        link: link,
 			scope:{
-				show:"=show",
-				title:"@title"
+				
 			}
 		};
 

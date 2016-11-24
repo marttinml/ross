@@ -36,3 +36,10 @@ ng-alert > .content > .header{
 	color: rgb(255,255,255);
 	text-align: center;
 }
+
+ng-alert > .content > .header > i{
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	cursor: pointer;
+}

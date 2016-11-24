@@ -71,8 +71,21 @@
 
         };
         $scope.alertActive = false;
+        $scope.spin = false;
         $scope.eventButton = function(){
+            alert();
+        };
+
+        $scope.showAlert = function(){
             $scope.alertActive = true;
+        };
+
+        $scope.showSpin = function(){
+           $scope.spin = true;
+           setTimeout(function(){
+                $scope.spin = false;
+                $scope.$apply();
+           },2000);
         };
 
 

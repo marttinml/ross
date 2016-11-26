@@ -149,6 +149,15 @@ button{
     border-radius: 2px;
     background-color: rgb(51,153,75);
     color:rgb(255,255,255);
+    transition: .3s;
+}
+button:hover{
+    background-color: rgb(61,163,85);
+    transition: .3s;
+}
+button:active{
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,.5);
+    transition: .1s;
 }
 button.disable{
     background-color: rgb(200,200,200);

@@ -21,17 +21,22 @@ ng-select > div{
 	border: none;
 	text-align: left;
 	z-index: 1;
+	line-height: 2.2;
+	cursor: pointer;
 }
 ng-select > div > span{
 	
 }
 ng-select > div > i{
-	
+	float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+
 }
 ng-select > ul{
 	width: 100%;
 	position: absolute;
-	top:31px;
+	top:41px;
 	right: 0;
 	left: 0;
 	z-index: 3;
@@ -81,6 +86,7 @@ ng-select > title.empty{
 }
 ng-select > .disable{
 	color: rgb(200,200,200);
+	cursor: default;
 }
 ng-select > hr.disable{
 	border-color: rgb(200,200,200);

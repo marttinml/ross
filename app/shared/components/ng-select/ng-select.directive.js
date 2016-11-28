@@ -5,30 +5,31 @@
 		
 		var link = function(scope, element, attrs, ngModelCtrl){
 
-			ngModelCtrl.$render = function(){
-				scope.model = ngModelCtrl.$viewValue;
-				scope.inputBlur();
-			};
+
 
 			scope.init = function(){
 				scope.optional = scope.optional ? true : false;
 				scope.disable = scope.disable ? true : false;
-				scope.inputBlur();
+				scope.selectBlur();
 			};
 			scope.selectFocus = function () {
-
 				if(!scope.disable && !scope.focus){
-	                scope.empty = false
+	                // scope.empty = false;
 	                scope.focus = true;
 	            }
             };
 
-
-            scope.selectBlur = function(){
-            	scope.focus = false;
+            scope.select = function(item){
+            	scope.model = item;
+            	scope.selectBlur();
             };
 
-            scope.inputBlur = function () {
+
+            // scope.selectBlur = function(item){
+            // 	scope.focus = false;
+            // };
+
+            scope.selectBlur = function () {
                 if (scope.model === '' || scope.model === undefined) {
                     scope.empty = true; 
                 } else {
@@ -36,7 +37,14 @@
                 }
                 scope.focus = false;
             };
+            
             scope.init();
+
+            ngModelCtrl = ngModelCtrl || {$render:function(){}};
+			ngModelCtrl.$render = function(){
+				scope.model = ngModelCtrl.$viewValue;
+				scope.selectBlur();
+			};
 		};
 
 		return {

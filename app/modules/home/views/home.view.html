@@ -85,6 +85,32 @@
 		</li>
 	</ul>
 
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Checkbox</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> 
+			<ng-checkbox  options="ngCheckboxOptions" place-holder="Name" ></ng-checkbox>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-3">
+			<ng-checkbox ng-model="ngCheckboxOptions" options="ngSelectOptions" place-holder="Lastname" disable="true"></ng-checkbox>
+		</li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> <h1>Radiobutton</h1> </li>
+	</ul>
+
+	<ul class="row">
+		<li class="md-col-6 sm-col-12 lg-col-3"> 
+			<ng-radiobutton  options="ngRadiobuttonOptions" place-holder="Name" ></ng-radiobutton>
+		</li>
+		<li class="md-col-6 sm-col-12 lg-col-3">
+			<ng-radiobutton ng-model="ngRadiobuttonOptions" options="ngSelectOptions" place-holder="Lastname" disable="true"></ng-radiobutton>
+		</li>
+	</ul>
+
 </main>
 
 <ng-alert show="alertActive" title="Alert">

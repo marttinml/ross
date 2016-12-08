@@ -9,7 +9,7 @@ ng-menu > i{
 	cursor: pointer;
 }
 ng-menu > .overlay{
-	position: absolute;
+	position: fixed;
 	top:0;
 	left: 0;
 	right: 0;
@@ -19,7 +19,7 @@ ng-menu > .overlay{
 }
 
 ng-menu > .menu{
-	position: absolute;
+	position: fixed;
 	left: -305px;
 	top:0;
 	bottom: 0;
@@ -29,6 +29,7 @@ ng-menu > .menu{
 	max-width: 300px;
 	box-shadow: 0px 0px 5px rgba(0,0,0,.5);
 	transition: .3s;
+	overflow: auto;
 }
 ng-menu > .menu.animate-menu{
 	transition: .3s;

@@ -66,6 +66,21 @@
                 },
                 {
                     item:"item 3"
+                },
+                {
+                    item:"item 1"
+                },
+                {
+                    item:"item 2"
+                },
+                {
+                    item:"item 3"
+                },
+                {
+                    item:"item 1"
+                },
+                {
+                    item:"item 2"
                 }
             ]
 
@@ -89,6 +104,16 @@
         };
 
         $scope.ngSelectOptions = [
+            {id:1,name:"item 1"},
+            {id:2,name:"item 2"},
+            {id:3,name:"item 3"}
+        ];
+        $scope.ngCheckboxOptions = [
+            {id:1,name:"item 1"},
+            {id:2,name:"item 2"},
+            {id:3,name:"item 3"}
+        ];
+        $scope.ngRadiobuttonOptions = [
             {id:1,name:"item 1"},
             {id:2,name:"item 2"},
             {id:3,name:"item 3"}
